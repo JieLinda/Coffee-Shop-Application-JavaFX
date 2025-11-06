@@ -44,5 +44,5 @@ The file [`export.sql`](./export.sql) contains:
 You can restore the database using **pgAdmin** or the `psql` command:
 
 ```bash
-createdb lindaFinal
-psql -U postgres -d lindaFinal -f export.sql
+createdb CoffeeDB
+psql -U postgres -d CoffeeDB -f export.sql
