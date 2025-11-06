@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="PaneReport" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="571.0" prefWidth="754.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pboproject.controllers.ReportsController">
+    <children>
+        <Label layoutX="43.0" layoutY="45.0" text="Report Type :" />
+        <ChoiceBox fx:id="cbReportType" layoutX="136.0" layoutY="41.0" prefWidth="150.0" />
+        <Label layoutX="43.0" layoutY="80.0" text="Start Date :" />
+        <DatePicker fx:id="dpStartDate" layoutX="136.0" layoutY="75.0" prefWidth="150.0" />
+        <Label layoutX="43.0" layoutY="115.0" text="End Date :" />
+        <DatePicker fx:id="dpEndDate" layoutX="136.0" layoutY="110.0" prefWidth="150.0" />
+        <Button fx:id="btnSubmit" layoutX="43.0" layoutY="150.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="Submit" />
+        <TableView fx:id="tblReport" layoutX="29.0" layoutY="200.0" prefHeight="361.0" prefWidth="690.0">
+            <columns>
+                <TableColumn prefWidth="75.0" text="ID" />
+                <TableColumn prefWidth="208.0" text="Produk" />
+                <TableColumn prefWidth="193.0" text="Jumlah Terjual" />
+                <TableColumn prefWidth="213.0" text="Total Penjualan (Rp)" />
+            </columns>
+        </TableView>
+        <ImageView fx:id="btnExport" fitHeight="49.0" fitWidth="56.0" layoutX="663.0" layoutY="68.0" onMouseClicked="#export" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../export-200.png" />
+            </image>
+        </ImageView>
+    </children>
+</AnchorPane>

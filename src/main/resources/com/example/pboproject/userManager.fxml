@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="539.0" prefWidth="835.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pboproject.controllers.UserManagerController">
+   <children>
+      <TableView fx:id="tableUser" layoutX="26.0" layoutY="24.0" onMouseClicked="#showOnClick" prefHeight="493.0" prefWidth="418.0">
+         <columns>
+            <TableColumn fx:id="colidmenu" prefWidth="50.0" text="ID" />
+            <TableColumn fx:id="colprice" minWidth="0.0" prefWidth="128.0" text="Price" />
+         </columns>
+      </TableView>
+      <Button fx:id="btndeletemenu" layoutX="533.0" layoutY="164.0" mnemonicParsing="false" onAction="#delete" text="Delete" />
+      <Button fx:id="btndeletemenu1" layoutX="596.0" layoutY="164.0" mnemonicParsing="false" onAction="#change" text="Change" />
+      <Button fx:id="btndeletemenu2" layoutX="661.0" layoutY="164.0" mnemonicParsing="false" onAction="#add" text="Add" />
+      <Label layoutX="479.0" layoutY="52.0" text="Username" />
+      <TextField fx:id="fieldUser" layoutX="550.0" layoutY="48.0" />
+      <TextField fx:id="fieldPass" layoutX="550.0" layoutY="88.0" />
+      <Label layoutX="481.0" layoutY="92.0" text="Password" />
+      <Label layoutX="481.0" layoutY="130.0" text="Type" />
+      <ComboBox fx:id="comboType" layoutX="550.0" layoutY="126.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>

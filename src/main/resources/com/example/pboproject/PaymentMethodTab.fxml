@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pboproject.controllers.PaymentTabController">
+        <children>
+            <Button fx:id="btnsavepayment" layoutX="361.0" layoutY="153.0" mnemonicParsing="false" onAction="#save" prefHeight="25.0" prefWidth="48.0" text="Save" />
+            <Text layoutX="55.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Payment Method" />
+            <TableView fx:id="tablePayment" layoutX="55.0" layoutY="205.0" onMouseClicked="#showOnClick" prefHeight="260.0" prefWidth="361.0">
+                <columns>
+                    <TableColumn fx:id="colidpayment" prefWidth="54.0" text="ID" />
+                    <TableColumn fx:id="colpaymentmethod" prefWidth="182.0" text="Payment Method" />
+                    <TableColumn fx:id="colbank" prefWidth="122.0" text="Bank" />
+                </columns>
+            </TableView>
+            <Button fx:id="btneditpayment" layoutX="57.0" layoutY="153.0" mnemonicParsing="false" onAction="#edit" prefHeight="25.0" prefWidth="48.0" text="Edit" />
+            <Button fx:id="btndeletepayment" layoutX="132.0" layoutY="153.0" mnemonicParsing="false" onAction="#delete" prefHeight="25.0" prefWidth="65.0" text="Delete" />
+            <Text layoutX="55.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bank" />
+            <TextField fx:id="fieldbank" layoutX="197.0" layoutY="88.0" prefHeight="25.0" prefWidth="212.0" />
+            <ComboBox fx:id="combopaymentmethod" layoutX="197.0" layoutY="47.0" prefHeight="25.0" prefWidth="212.0" />
+        </children>
+
+</AnchorPane>

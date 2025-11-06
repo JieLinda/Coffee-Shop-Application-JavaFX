@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="656.0" prefWidth="708.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pboproject.controllers.OrderController">
+   <children>
+   <TableView fx:id="tablediscount" layoutX="342.0" layoutY="361.0" prefHeight="173.0" prefWidth="312.0">
+      <columns>
+         <TableColumn fx:id="coldiscount" prefWidth="71.0" text="Discount" />
+         <TableColumn fx:id="colproduct" prefWidth="103.0" text="Product" />
+         <TableColumn fx:id="colpaymentmethod" prefWidth="135.0" text="Payment Method" />
+      </columns>
+   </TableView>
+   <TableView fx:id="tableorders" layoutX="49.0" layoutY="53.0" prefHeight="189.0" prefWidth="606.0">
+      <columns>
+         <TableColumn fx:id="colidpayment" prefWidth="52.0" text="Price ID" />
+         <TableColumn fx:id="colpricepayment" prefWidth="194.0" text="Product Name" />
+         <TableColumn fx:id="colsizepayment" prefWidth="79.0" text="Size" />
+         <TableColumn fx:id="colproductnamepayment" prefWidth="93.0" text="Price" />
+         <TableColumn fx:id="colqtypayment" prefWidth="54.0" text="Qty" />
+         <TableColumn fx:id="coltotalprice" prefWidth="128.0" text="Total Price" />
+      </columns>
+   </TableView>
+   <Text layoutX="49.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Payment Method" />
+   <TextField fx:id="fieldpayment" layoutX="153.0" layoutY="522.0" onAction="#initialize" prefHeight="25.0" prefWidth="149.0" />
+   <Text layoutX="48.0" layoutY="577.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Change" />
+   <Text layoutX="426.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total" />
+   <Text layoutX="48.0" layoutY="329.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cust. Name" />
+   <Text layoutX="426.0" layoutY="329.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cashier" />
+   <TextField fx:id="fieldcustName" layoutX="151.0" layoutY="312.0" onAction="#initialize" />
+   <Text layoutX="48.0" layoutY="366.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Member ID" />
+   <TextField fx:id="fieldmemberID" layoutX="152.0" layoutY="349.0" onAction="#initialize" prefHeight="25.0" prefWidth="60.0" />
+   <Text layoutX="48.0" layoutY="539.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Payment" />
+   <TextField fx:id="autototal" layoutX="534.0" layoutY="272.0" prefHeight="25.0" prefWidth="121.0" />
+   <TextField fx:id="autototalQty" layoutX="480.0" layoutY="272.0" prefHeight="25.0" prefWidth="46.0" />
+   <TextField fx:id="autochange" layoutX="152.0" layoutY="560.0" prefHeight="25.0" prefWidth="149.0" />
+   <ComboBox fx:id="combopaymentmethod" layoutX="152.0" layoutY="272.0" onAction="#initialize" prefHeight="25.0" prefWidth="190.0" />
+   <TextField fx:id="fieldcashier" layoutX="506.0" layoutY="312.0" onAction="#initialize" />
+   <Button fx:id="btnsavePayment" layoutX="241.0" layoutY="463.0" mnemonicParsing="false" onAction="#saveTransaction" prefHeight="25.0" prefWidth="60.0" text="Save" />
+   <Text layoutX="400.0" layoutY="569.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Transaction Total" />
+   <TextField fx:id="autototaltransaction" layoutX="506.0" layoutY="552.0" prefHeight="25.0" prefWidth="149.0" />
+   <Button fx:id="btncancel" layoutX="151.0" layoutY="463.0" mnemonicParsing="false" onAction="#cancel" prefHeight="25.0" prefWidth="60.0" text="Cancel" />
+   <Button fx:id="btnEND" layoutX="549.0" layoutY="597.0" mnemonicParsing="false" onAction="#endTransac" prefHeight="25.0" prefWidth="105.0" text="End Transaction" />
+   <CheckBox fx:id="checkMember" layoutX="308.0" layoutY="315.0" mnemonicParsing="false" text="Member" />
+   <Text layoutX="48.0" layoutY="438.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Points Gain" />
+   <TextField fx:id="fieldpoinGain" layoutX="152.0" layoutY="421.0" prefHeight="25.0" prefWidth="60.0" />
+   <TextField fx:id="fieldAvlPoints" layoutX="152.0" layoutY="384.0" prefHeight="25.0" prefWidth="67.0" />
+   <CheckBox fx:id="checkUsePoint" layoutX="227.0" layoutY="388.0" mnemonicParsing="false" text="Use as a disc" />
+   <Text layoutX="46.0" layoutY="401.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Available Points" />
+   </children>
+</Pane>

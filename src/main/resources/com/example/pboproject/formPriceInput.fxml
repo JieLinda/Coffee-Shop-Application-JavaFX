@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="646.0" prefWidth="755.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pboproject.controllers.FormPriceInputController">
+   <children>
+      <TableView fx:id="menuView" layoutX="61.0" layoutY="41.0" onMouseClicked="#searchPrices" prefHeight="370.0" prefWidth="295.0">
+        <columns>
+          <TableColumn fx:id="colProductID" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="colProductType" prefWidth="122.60000610351562" text="Type" />
+            <TableColumn fx:id="colProductName" prefWidth="95.99998779296874" text="Name" />
+        </columns>
+      </TableView>
+      <TableView fx:id="sizePriceView" layoutX="403.0" layoutY="41.0" onMouseClicked="#clickedPrice" prefHeight="367.0" prefWidth="290.0">
+         <columns>
+            <TableColumn fx:id="colPriceID" prefWidth="100.0" text="Price ID" />
+            <TableColumn fx:id="colSize" prefWidth="99.0" text="Size" />
+            <TableColumn fx:id="colPrice" prefWidth="99.0" text="Price" />
+         </columns>
+      </TableView>
+      <Button fx:id="delBtn" layoutX="394.0" layoutY="594.0" mnemonicParsing="false" onAction="#delete2" prefHeight="25.0" prefWidth="297.0" text="Delete Price" />
+      <Button fx:id="addPrice" layoutX="555.0" layoutY="558.0" mnemonicParsing="false" onAction="#add2" prefHeight="25.0" prefWidth="137.0" text="Add" />
+      <TextField fx:id="priceInput" layoutX="396.0" layoutY="516.0" prefHeight="25.0" prefWidth="295.0" />
+      <Label layoutX="399.0" layoutY="413.0" prefHeight="35.0" prefWidth="53.0" text="Size">
+         <font>
+            <Font size="21.0" />
+         </font></Label>
+      <Label layoutX="400.0" layoutY="480.0" text="Price">
+         <font>
+            <Font size="21.0" />
+         </font></Label>
+      <ComboBox fx:id="comboSize" layoutX="396.0" layoutY="451.0" prefHeight="25.0" prefWidth="295.0" />
+      <Button fx:id="changePrice" layoutX="394.0" layoutY="558.0" mnemonicParsing="false" onAction="#change2" prefHeight="25.0" prefWidth="141.0" text="Change" />
+      <Button fx:id="deleteProduct" layoutX="59.0" layoutY="595.0" mnemonicParsing="false" onAction="#deleteProduct" prefHeight="25.0" prefWidth="297.0" text="Delete Product" />
+      <Button fx:id="addProduct" layoutX="220.0" layoutY="559.0" mnemonicParsing="false" onAction="#addProduct" prefHeight="25.0" prefWidth="137.0" text="Add" />
+      <TextField fx:id="fieldProduct" layoutX="61.0" layoutY="517.0" prefHeight="25.0" prefWidth="295.0" />
+      <Label layoutX="146.0" layoutY="415.0" prefHeight="35.0" prefWidth="176.0" text="Product Type">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="65.0" layoutY="481.0" text="Product Name">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Button fx:id="changeProduct" layoutX="59.0" layoutY="559.0" mnemonicParsing="false" onAction="#changeProduct" prefHeight="25.0" prefWidth="141.0" text="Change" />
+      <TextField fx:id="fieldProductID" layoutX="62.0" layoutY="450.0" prefHeight="26.0" prefWidth="68.0" />
+      <Label layoutX="65.0" layoutY="415.0" prefHeight="35.0" prefWidth="46.0" text="ID">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="comboType" layoutX="146.0" layoutY="451.0" prefHeight="25.0" prefWidth="208.0" />
+   </children>
+</AnchorPane>

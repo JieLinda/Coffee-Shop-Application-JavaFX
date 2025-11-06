@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane fx:id="paneorderlist" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="583.0" prefWidth="776.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pboproject.controllers.OrderController">
+   <children>
+      <TableView fx:id="table" layoutX="53.0" layoutY="296.0" prefHeight="242.0" prefWidth="672.0">
+         <columns>
+            <TableColumn fx:id="colid" prefWidth="52.0" text="Price ID" />
+            <TableColumn fx:id="colproductname" prefWidth="174.0" text="Product Name" />
+            <TableColumn fx:id="coltype" prefWidth="88.0" text="Type" />
+            <TableColumn fx:id="colsize" prefWidth="77.0" text="Size" />
+            <TableColumn fx:id="colprice" prefWidth="83.0" text="Price" />
+            <TableColumn fx:id="colrequest" prefWidth="155.0" text="Request" />
+            <TableColumn fx:id="colqty" prefWidth="40.0" text="Qty" />
+         </columns>
+      </TableView>
+      <Button fx:id="btnedit" layoutX="53.0" layoutY="251.0" mnemonicParsing="false" onAction="#editSelectedRow" text="Edit" />
+      <Button fx:id="btndelete" layoutX="112.0" layoutY="251.0" mnemonicParsing="false" onAction="#deleteList" text="Delete" />
+      <Text layoutX="56.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Product Type" />
+      <Text layoutX="159.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Product Name" />
+      <Text layoutX="334.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Size" />
+      <Text layoutX="457.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Qty" />
+      <Text layoutX="457.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Request" />
+      <Button fx:id="btnnext" layoutX="653.0" layoutY="251.0" mnemonicParsing="false" onAction="#next" prefHeight="25.0" prefWidth="72.0" text="Next" />
+      <Label layoutX="590.0" layoutY="143.0" text="Membership">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Spinner fx:id="spinnerqty" layoutX="526.0" layoutY="93.0" prefHeight="26.0" prefWidth="99.0" />
+      <Button fx:id="btnaddMember" layoutX="581.0" layoutY="183.0" mnemonicParsing="false" onAction="#addMember" prefHeight="25.0" prefWidth="89.0" text="Add Member" />
+      <TextField fx:id="fieldRequest" layoutX="526.0" layoutY="51.0" onAction="#initialize" prefHeight="25.0" prefWidth="193.0" />
+      <Button fx:id="btnSave" layoutX="186.0" layoutY="251.0" mnemonicParsing="false" onAction="#save" text="Save" />
+      <Button fx:id="btnaddorder" layoutX="379.0" layoutY="251.0" mnemonicParsing="false" onAction="#addOrder" text="Add New Order" />
+      <ListView fx:id="listType" layoutX="51.0" layoutY="76.0" prefHeight="120.0" prefWidth="99.0" />
+      <ListView fx:id="listName" layoutX="157.0" layoutY="76.0" prefHeight="120.0" prefWidth="168.0" />
+      <ListView fx:id="listSize" layoutX="332.0" layoutY="76.0" prefHeight="120.0" prefWidth="99.0" />
+      <TextField fx:id="autotype" layoutX="51.0" layoutY="208.0" prefHeight="25.0" prefWidth="99.0" />
+      <TextField fx:id="autoname" layoutX="157.0" layoutY="208.0" prefHeight="25.0" prefWidth="168.0" />
+      <TextField fx:id="autosize" layoutX="332.0" layoutY="208.0" prefHeight="25.0" prefWidth="99.0" />
+   </children>
+</Pane>

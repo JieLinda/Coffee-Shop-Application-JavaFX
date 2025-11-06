@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="638.0" prefWidth="778.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pboproject.controllers.MainMasterController">
+  <tabs>
+    <Tab fx:id="tabmenu" text="Menu List">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="371.0" prefWidth="694.0">
+               <children>
+                  <TableView fx:id="allMenu" layoutX="47.0" layoutY="86.0" prefHeight="471.0" prefWidth="678.0">
+                    <columns>
+                      <TableColumn fx:id="colidmenu" prefWidth="50.0" text="ID" />
+                      <TableColumn fx:id="colproductname" prefWidth="207.0" text="Product Name" />
+                        <TableColumn fx:id="coltype" minWidth="0.0" prefWidth="114.0" text="Type" />
+                        <TableColumn fx:id="colpriceID" minWidth="0.0" prefWidth="63.0" text="Price ID" />
+                        <TableColumn fx:id="colsize" minWidth="0.0" prefWidth="108.0" text="Size" />
+                        <TableColumn fx:id="colprice" minWidth="0.0" prefWidth="128.0" text="Price" />
+                    </columns>
+                  </TableView>
+                  <Button fx:id="btnviewproduct" layoutX="47.0" layoutY="43.0" mnemonicParsing="false" onAction="#input" text="Edit List" />
+                  <Button layoutX="123.0" layoutY="43.0" mnemonicParsing="false" onAction="#refresh" text="Refresh" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab fx:id="tabdiscount" text="Discount List">
+      <content>
+            <fx:include source="DiscountTab.fxml" />
+      </content>
+    </Tab>
+      <Tab fx:id="tabpaymentmethod" text="Payment Methods">
+         <content>
+             <fx:include source="PaymentMethodTab.fxml" />
+         </content>
+      </Tab>
+      <Tab text="Report">
+        <content>
+            <fx:include source="Reports.fxml" />
+        </content>
+      </Tab>
+      <Tab text="Users">
+        <content>
+            <fx:include source="userManager.fxml" />
+        </content>
+      </Tab>
+      <Tab text="Member">
+          <content>
+              <fx:include source="formTableMember.fxml" />
+          </content>
+      </Tab>
+  </tabs>
+</TabPane>
